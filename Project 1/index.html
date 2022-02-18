@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="font-family: tahoma">    
+    <div id="tooltip"></div>
+
+    <h1>Project 1: Bad Air</h1>
+    <h2>By: Sydni-Dee Venter</h2>
+    <p>Data Source: US Environmental Protection Agency. Air Quality System Data Mart [internet database] available via https://www.epa.gov/outdoor-air-quality-data. Accessed February 18, 2022.</p>
+
+    <h4 class="title">Hamilton, OH: AQI Over Time</h4>
+    <div class='inline' >
+        <p class="yside"><small>AQI</small></p>
+        <svg id="lineChart"></svg>
+        <p class="xside"><small>Year</small></p>
+    </div>
+    <svg id="lineChartLegend"></svg>
+
+    <h4 class="title">Hamilton, OH: Pollutants Over Time</h4>
+    <div class='inline'>
+        <p class="yside"><small>Percent of Pollutant</small></p>
+        <svg id="airLineChart"></svg>
+        <p class="xside"><small>Year</small></p>
+    </div>
+    <svg id="airLineChartLegend"></svg>
+    
+    <h4 class="title1">Hamilton, OH: Amount of Missed Data Year to Year</h4>
+    <div>
+        <p class="yside"><small>Amount of Missed Days</small></p>
+        <svg id="missBarChart"></svg>
+        <p class="xside"><small>Year</small></p>
+    </div>
+
+    <h4 class="title1">Hamilton, OH: AQI Percentages of 2021</h4>
+    <div>
+        <p class="yside"><small>AQI Percentage</small></p>
+        <svg id="airQualityChart"></svg>
+        <p class="xside"><small>AQI Quality</small></p>
+    </div>
+
+    <h4 class="title">Hamilton, OH: Pollutant Percentages of 2021</h4>
+    <div>
+        <p class="yside"><small>Pollutant Percentage</small></p>
+        <svg id="pollutantChart"></svg>
+        <p class="xside"><small>Pollutant</small></p>
+    </div>
+
+    <!-- D3 bundle -->
+    <script src="js/d3.v6.min.js"></script>
+
+    <!-- Our JS code - INCLUDING the new files-->
+    <script src="js/main.js"></script>
+    <script src="js/lineChart.js"></script>
+    <script src="js/barChart.js"></script>
+
+</body>
+</html>
