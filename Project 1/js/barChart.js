@@ -24,11 +24,11 @@ class BarChart{
         vis.yValue = d => d.value;
         
         vis.yScale = d3.scaleLinear()
-          .domain(d3.extent(vis.data, vis.yValue)) //max from sales field in the objects in the data array
+          .domain(d3.extent(vis.data, vis.yValue)) 
           .range([vis.height, 0]);
 
         vis.xScale = d3.scaleBand()
-            .domain(vis.data.map(vis.xValue)) //list of the month field in the objects in the data array
+            .domain(vis.data.map(vis.xValue))
             .range([0, vis.width])
             .paddingInner(0.2);
 
@@ -68,15 +68,6 @@ class BarChart{
           .attr('height', function (d) {return vis.height - vis.yScale(d.value)})
           .attr('y', d => vis.yScale(d.value))
           .attr('x', d => vis.xScale(d.year));
-    
-
-    //Add Labels
-    // vis.chart.append("text")
-    //     .attr("transform", "translate(100,0)")
-    //     .attr("x", 50)
-    //     .attr("y", 20)
-    //     .attr("font-size", "24px")
-    //     .text("Percentage of AQI Categories from 1980-2021")
       
     }
 
